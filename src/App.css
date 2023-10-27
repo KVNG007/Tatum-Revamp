@@ -1,0 +1,29 @@
+
+
+.image {
+  position: absolute;
+  width: 100dvw;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: no-repeat;
+  background-image: url(./assets/1.png);
+  
+}
+.image2 {
+  position: absolute;
+  height: 100dvh;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: no-repeat;
+  background-image: url(./assets/1.png);
+  
+}
+
+.img-holder {
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden !important;
+  display: flex;
+  align-items: center;
+  place-content: center;
+}
