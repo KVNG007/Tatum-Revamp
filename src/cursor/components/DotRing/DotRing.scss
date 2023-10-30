@@ -1,0 +1,121 @@
+@import "../../../styles/mixins";
+
+html {
+  cursor: none;
+}
+
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  border: 1px solid $color-red;
+  height: 2.5rem;
+  border-radius: 50%;
+  opacity: 0;
+  // transform: translate3d(-50%, -50%);
+  // -webkit-transition-duration: 300ms;
+  transition-duration: 150ms;
+  
+  // -webkit-transition-timing-function: cubic-bezier(0.75, -1.27, 0.3, 2.33);
+  transition-timing-function: linear;
+  // transition-timing-function: ease-out;
+  will-change: width, height, transform, border;
+  z-index: 1002;
+      // mix-blend-mode: exclusion;
+      // background-color: $colormain-light;
+  // background-blend-mode: exclusion;
+
+  // background-color: transparent;
+  pointer-events: none;
+  overflow: hidden;
+  @include respond(tab-port){
+    visibility: hidden;
+
+  }
+
+  &__inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+      mix-blend-mode: difference;
+      z-index: 10000;
+  backdrop-filter: grayscale(100%);
+  }
+}
+
+.dot {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: $color-red;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 1002;
+  pointer-events: none;
+    will-change: width, height, transform, border;
+
+    @include respond(tab-port){
+      visibility: hidden;
+  
+    }
+}
+
+.dot.button{
+
+  animation:ease-in-out pulseCursor 1.5s infinite;
+}
+
+.ring.hovered {
+  width: 50px;
+  height: 50px;
+  border-width: 3px;
+  border-color: lightgray;
+}
+
+ /* 
+.dot.text{
+  border-color: $color-red;
+  background-color: $color-red;
+  
+} */
+
+.dot.text{
+  width: 0.25rem;
+  height: 1.5rem;
+  border-color: $color-red;
+  background-color: $color-red;
+  border-radius: 0;
+  animation: none!important;;
+
+}
+
+.dot.hovered, .ring.text, .ring.button {
+  display: none;
+}
+
+@keyframes pulseCursor {
+
+  0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba($color-red, 0.7);
+	}
+
+	70% {
+		transform: scale(1.5);
+		box-shadow: 0 0 0 1rem rgba($color-red, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba($color-red, 0);
+	}
+  
+}
+
+.ring.game{
+  display: none;
+  visibility: hidden;
+}

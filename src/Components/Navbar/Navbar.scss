@@ -1,0 +1,140 @@
+.Nav {
+    background-color: rgb(255, 255, 255);
+    width: 100dvw;
+    box-shadow: 400px -4px 30px 5px rgba(0, 0, 0, 0.3);
+    padding-block: 35px 15px;
+
+    &__cont {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            font-size: 2vw;
+            color: #319dc9;
+            // font-family: "Algol";
+            // font-family: "Bruce";
+            // font-family: "Esportiva";
+            // font-family: "Striker";
+            // font-family: "Valorax";
+            font-family: "Vermin";
+            // font-family: "Vector";
+
+            letter-spacing: 5px;
+
+            span {
+                color: #8CC73F;
+            }
+        }
+        
+        .nav__mid {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2.5dvw;
+
+            .butt{
+                position: relative;
+                display: flex;
+                height: 40px;
+                width: 100px;
+                background-color: #319dc9;
+                color: rgb(255, 255, 255);
+                font-size: .9em;
+                align-items: center;
+                font-family: "Vermin";
+                font-weight: bold;
+                line-height: .5;
+                place-content: center;
+                border: 1px solid black;
+                border-radius: .5em;
+                
+                .ska1, .ska2 {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    padding: 5px;
+                    line-height: 1.2;
+                    font-size: 1em;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition:  .75s ease-in-out;
+                }
+    
+                .ska1 {
+                    .spa__one {
+                        transform-origin: top;
+                        transform: scale3d(1, 0, 1) ;
+                        // transition: all .3s ease-in-out;
+                    }
+    
+                }
+                
+                .ska2 {
+                    .spa__two {
+                        transform-origin: bottom;
+                        transform: scale3d(1, 1, 1);
+                        // transition: all .3s ease-in-out;
+                    }
+                }
+            }
+    
+            ul {    
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 2.5dvw;
+
+                li {
+                    font-family: "Striker";
+                    font-size: .7em;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        color: #319dc9;
+                    }
+
+                    
+                }
+    
+                
+            }
+        }
+
+        & > ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1vw;
+
+            a {
+                width: 35px;
+                height: 35px;
+                border-radius: .2em;
+                
+                &:nth-of-type(4) {
+                    width: 30px;
+                    height: 30px;
+                    background-color: rgb(0, 0, 0);
+                }
+            }
+
+             svg {
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+
+        
+
+    }
+    
+}
+

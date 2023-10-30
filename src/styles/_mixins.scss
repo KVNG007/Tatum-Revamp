@@ -1,0 +1,62 @@
+@mixin respond($breakpoint) {
+	@if $breakpoint==small-phone {
+		@media (max-width: 23.75em) {
+			@content;
+		} //400px
+	}
+	@if $breakpoint==phone {
+		@media (max-width: 37.5em) {
+			@content;
+		} //600px
+	}
+	@if $breakpoint==tab-port {
+		@media (max-width: 56.25em) {
+			@content;
+		} //900px
+	}
+	@if $breakpoint==tab-land {
+		@media (max-width: 75em) {
+			@content;
+		} //1200px
+	}
+	@if $breakpoint==big-desktop {
+		@media (min-width: 112.5em) {
+			@content;
+		} //1800px
+	}
+	
+}
+
+
+$colormain-dark:#c8e2ff;
+$colormain:#eaf7fd;
+$colormain-light:#f9fcfe;
+
+$color-red: #319dc9;
+$transition: .3s ease-in-out;
+
+$color-white:#fff;
+
+$color-dark:#212121;
+$color-dark-alt:#3d3c3c;
+
+$color-dark2:#3c3c6473;
+
+$color-green:#95C033;
+$color-amber:#FFCA2A;
+$color-brown:#F47D35;
+
+
+$transition:.2s ease-in-out;
+
+
+$color-gold:#faf2d0;
+$color-purple:rgba(236, 38, 143, 1);
+;
+
+$color-gold2:#FFB803;
+$color-gold-dark:#d69029;
+
+
+$color-mojxu:#f8ff00;
+
