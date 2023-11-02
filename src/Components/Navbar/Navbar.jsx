@@ -9,7 +9,7 @@ import Youtube from "../../assets/youtube.json"
 import Linkedin from "../../assets/linkedin.json"
 import Linkedin2 from "../../assets/linkedin2.json"
 
-const Navbar = () => {
+const Navbar = ({toggle, toggleShow}) => {
 
   const [hover, setHover] = useState(false);
 
@@ -54,11 +54,11 @@ const Navbar = () => {
     <div className="Nav">
       <div className="container">
         <nav className='Nav__cont'>
-          <h3 className='logo'>Tatum <span>Games</span></h3>
+          <Link className='logo btn'>Tatum <span>Games</span></Link>
 
           <div className="nav__mid">
             <ul>
-              <li className='text'><Link to="/">Home</Link></li>
+              <li><Link to="/">Home</Link></li>
               <li><Link to="/about-us">About Us</Link></li>
               <li><Link to="/support">Support</Link></li>
 
@@ -121,6 +121,15 @@ const Navbar = () => {
                 onMouseLeave={()=> LottieRef4.current.stop()}/>
             </a>
           </ul>
+
+          <div className={ toggle ? "ham active" : " ham"}
+            onClick={()=> toggleShow()}
+          >
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+
         </nav>
 
       </div>

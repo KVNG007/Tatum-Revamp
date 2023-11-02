@@ -1,0 +1,46 @@
+@import "../styles/mixins";
+
+.Landing {
+    background-color: rgb(255, 255, 255);
+
+    
+
+    .header {
+
+        &__mobile {
+            position: relative; 
+            // overflow-x: hidden ;
+            
+            .swiper {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                aspect-ratio: 1 / 1;
+            }
+
+            .swiper-3d {
+                perspective: unset !important;
+            }
+
+            .swiper-wrapper {
+                width: 100%;
+            }
+            
+            .swiper-slide {
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                background-position: center;
+                background-size: cover;
+            }
+            
+            .swiper-slide img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+  
+}

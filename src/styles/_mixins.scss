@@ -1,20 +1,20 @@
 @mixin respond($breakpoint) {
 	@if $breakpoint==small-phone {
-		@media (max-width: 23.75em) {
+		@media (max-width: 23.5em) {
 			@content;
-		} //400px
+		} //375px
 	}
 	@if $breakpoint==phone {
-		@media (max-width: 37.5em) {
+		@media (max-width: 30.0em) {
 			@content;
-		} //600px
+		} //480px
 	}
 	@if $breakpoint==tab-port {
-		@media (max-width: 56.25em) {
+		@media (max-width: 48.75em) {
 			@content;
-		} //900px
+		} //780px
 	}
-	@if $breakpoint==tab-land {
+	@if $breakpoint==desktop {
 		@media (max-width: 75em) {
 			@content;
 		} //1200px

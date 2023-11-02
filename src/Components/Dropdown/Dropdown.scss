@@ -1,0 +1,107 @@
+@import "../../styles/mixins";
+
+.Dropdown {
+    position: fixed;
+    right:100%;
+    width: 70dvw;
+    height: 100dvh;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:30px 20px 20px 20px;
+    z-index: 3;
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .logo {
+            font-size: 2vw;
+            color: #319dc9;
+            font-family: "Vermin";
+    
+            letter-spacing: 5px;
+    
+            span {
+                color: #8CC73F;
+            }
+    
+            @include respond(phone) {
+                font-size: 1.25em;
+            }
+        }
+    
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+    
+            a {
+                font-family: "valorax";
+                padding: 10px 12.5px;
+                border-radius: .2em;
+                font-size: 1.1em;
+            }
+    
+            .micros {
+                color: white;
+                background-color: $color-red;
+                letter-spacing: 4px;
+            }
+    
+        }
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+
+        a {
+            width: 20%;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            place-content: center;
+
+            svg {
+                width: 20px;
+                aspect-ratio: 1 / 1;
+            } 
+
+            &:nth-of-type(4) {
+                background-color: black;
+                width: 15%;
+                border-radius: .3em;
+                display: flex;
+                align-items: center;
+                place-content: center;
+               
+                svg {
+                    width: 20px !important;
+                    // width: 100% !important;
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+    }
+
+}
+
+
+.shade {
+    position: fixed;
+    right: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    pointer-events: none;
+    // transition: backdrop-filter .3s ease-in-out;
+    z-index: -1;
+}
