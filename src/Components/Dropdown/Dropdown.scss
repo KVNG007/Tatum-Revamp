@@ -101,7 +101,7 @@
     height: 100dvh;
     background-color: transparent;
     backdrop-filter: blur(0px);
-    pointer-events: none;
+    // pointer-events:none !important;
     // transition: backdrop-filter .3s ease-in-out;
     z-index: -1;
 }

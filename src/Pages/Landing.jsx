@@ -54,6 +54,9 @@ const Landing = ({toggle, toggleShow}) => {
         </div>
       </header>
       
+      <div className="about-us">
+        About us blah blah blah blah blah blah blah blah blah blah
+      </div>
 
       <Footer />
     </div>

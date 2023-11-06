@@ -42,57 +42,67 @@ const Dropdown = ({toggle, toggleShow}) => {
 
   return (
     <>
-    <div className="shade" onClick={toggleShow}></div>
-    <div className="Dropdown">
+      <div className="shade" onClick={()=>{
+        if(toggle) {
+           toggleShow();
+        }
+        else return
+        }} 
+        style={!toggle ? {pointerEvents: "auto"} : { pointerEvents: "none !important"}}
+      >
 
-      <div className="top">
-        <Link className='logo btn'>
-          Tatum <span>Games</span>
-        </Link>
+      </div>
+      
+      <div className="Dropdown">
 
-        <ul >
-          <Link to="/home" className='dropdown__link' onClick={toggleShow}>
-            Home
+        <div className="top">
+          <Link className='logo btn'>
+            Tatum <span>Games</span>
           </Link>
-          <Link to="/about-us" className='dropdown__link' onClick={toggleShow}>
-            About us
-          </Link>
-          <Link to="/support" className='dropdown__link' onClick={toggleShow}>
-            Support
-          </Link>
-          <Link to="/" className='dropdown__link micros' onClick={toggleShow}>
-            MIKROS
-          </Link>
-        </ul>
+
+          <ul >
+            <Link to="/home" className='dropdown__link' onClick={toggleShow}>
+              Home
+            </Link>
+            <Link to="/about-us" className='dropdown__link' onClick={toggleShow}>
+              About us
+            </Link>
+            <Link to="/support" className='dropdown__link' onClick={toggleShow}>
+              Support
+            </Link>
+            <Link to="/" className='dropdown__link micros' onClick={toggleShow}>
+              MIKROS
+            </Link>
+          </ul>
+        </div>
+
+        <section>
+              <a>
+                <Lottie 
+                  animationData={Twitter} interactivity={true} loop={true} autoplay={false} 
+                />
+              </a>
+
+              <a>
+                <Lottie 
+                  animationData={Facebook} interactivity={true} loop={true} autoplay={false} 
+                />
+              </a>
+
+              <a>
+                <Lottie 
+                  animationData={Youtube} interactivity={true} loop={true} autoplay={false} 
+                />
+              </a>
+              
+              <a >
+                <Lottie style={{display: 'flex', alignItems: 'center', placeContent: 'center'}}
+                  animationData={Linkedin2} interactivity={true} loop={true} autoplay={false} 
+                />
+              </a>
+            </section>
       </div>
 
-      <section>
-            <a>
-              <Lottie 
-                animationData={Twitter} interactivity={true} loop={true} autoplay={false} 
-              />
-            </a>
-
-            <a>
-              <Lottie 
-                animationData={Facebook} interactivity={true} loop={true} autoplay={false} 
-              />
-            </a>
-
-            <a>
-              <Lottie 
-                animationData={Youtube} interactivity={true} loop={true} autoplay={false} 
-              />
-            </a>
-            
-            <a >
-              <Lottie style={{display: 'flex', alignItems: 'center', placeContent: 'center'}}
-                animationData={Linkedin2} interactivity={true} loop={true} autoplay={false} 
-              />
-            </a>
-          </section>
-    </div>
-        
     </>
   )
 }
